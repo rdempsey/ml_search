@@ -1,0 +1,117 @@
+{
+  "template" : "smdata-*",
+  "order" : 0,
+  "settings" : {
+    "number_of_replicas": "1",
+    "number_of_shards": "5",
+    "index.refresh_interval" : "5s"
+  },
+  "mappings" : {
+    "_default_" : {
+      "dynamic_templates" : [ {
+        "string_fields" : {
+          "mapping" : {
+            "index" : "not_analyzed",
+            "omit_norms" : true,
+            "type" : "string",
+            "ignore_above": 10922
+          },
+          "match_mapping_type" : "string",
+          "match" : "*"
+        }
+      } ],
+      "properties" : {
+        "@version" : {
+          "index" : "not_analyzed",
+          "type" : "string"
+        },
+        "doc": {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "when": {
+              "type": "string"
+            },
+            "date_of_birth": {
+              "type": "string"
+            }
+          }
+        },
+        "norm": {
+          "properties": {
+            "body": {
+              "type": "string",
+              "fielddata": {
+                "format": "disabled"
+              }
+            },
+            "author": {
+              "type": "string"
+            }
+          }
+        },
+        "meta": {
+          "properties": {
+            "geo_point": {
+              "properties" : {
+                "results": {
+                  "properties" : {
+                    "value": {
+                      "type": "geo_point"
+                    }
+                  }
+                }
+              }
+            },
+            "image_archiver": {
+              "properties" : {
+                "results": {
+                  "properties" : {
+                    "dhash_bits": {
+                      "type": "string",
+                      "fields": {
+                        "raw":   { "type": "string", "index": "not_analyzed" }
+                      }
+                    },
+                    "dhash_hex": {
+                      "type": "string",
+                      "fields": {
+                        "raw":   { "type": "string", "index": "not_analyzed" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "_all" : {
+        "enabled" : true
+      }
+    },
+    "tweet_traptor": {
+      "properties": {
+        "doc": {
+          "properties": {
+            "traptor": {
+              "properties": {
+                "rule_tag": {
+                  "type": "string",
+                  "fields": {
+                    "raw":   { "type": "string", "index": "not_analyzed" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "aliases" : { }
+}

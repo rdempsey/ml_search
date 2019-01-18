@@ -1,0 +1,9 @@
+find tweets by rdempsey
+find tweets in jordan
+find tweets with hashtag python in jordan
+find tweets in jordan by user rdempsey
+find tweets from username rdempsey in jordan tagged with ist.dev and app id 59859-49495-458485
+find tweets with hashtag python in jordan tagged with ist.dev
+find tweets by user rdempsey with hashtag python in jordan tagged with ist.dev and appid 2345-435-435435
+find tweets by user rdempsey to user kingjames with hashtag python in jordan tagged with ist.dev
+find tweets by user rdempsey to user kingjames with hashtag python in jordan tagged with ist.dev from 11/11/16 to 11/13/16

@@ -1,0 +1,4 @@
+Telegram posts containing keyword/hashtag X in channel Y
+Any Telegram post containing keyword/hashtag X
+Telegram posts mentioning other Telegram users (not sure if we can do this)
+Posts by Telegram user X in any Telegram channel

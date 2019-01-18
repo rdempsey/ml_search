@@ -1,0 +1,10 @@
+[run]
+omit =
+  # Version information
+  ml_search/version.py
+  # Coverage report
+  htmlcov/*
+
+[html]
+directory = htmlcov
+title = ML Search Coverage Report
